@@ -5,7 +5,8 @@ const PessoaController = require("../controllers/PessoaController.js");
 const router = Router();
 
 /* Quando essa rota for chamada, o método "obterTodasAsPessoas()" será executado. */
-router.get("/pessoas", PessoaController.obterTodasAsPessoas);
+router.get("/pessoas", PessoaController.obterTodasAsPessoasAtivas);
+router.get("/pessoas/todos", PessoaController.obterTodasAsPessoas);
 router.get("/pessoa/:id", PessoaController.obterPessoaPorId);
 router.post("/pessoa", PessoaController.criarPessoa);
 router.post("/pessoas/:id/restaura", PessoaController.restauraPessoa);
