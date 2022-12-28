@@ -8,6 +8,7 @@ const router = Router();
 router.get("/pessoas", PessoaController.obterTodasAsPessoas);
 router.get("/pessoa/:id", PessoaController.obterPessoaPorId);
 router.post("/pessoa", PessoaController.criarPessoa);
+router.post("/pessoas/:id/restaura", PessoaController.restauraPessoa);
 router.put("/pessoa/:id", PessoaController.atualizarPessoa);
 router.delete("/pessoa/:id", PessoaController.deletarPessoa);
 
