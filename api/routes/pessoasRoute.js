@@ -8,8 +8,17 @@ const router = Router();
 router.get("/pessoas", PessoaController.obterTodasAsPessoasAtivas);
 router.get("/pessoas/todos", PessoaController.obterTodasAsPessoas);
 router.get("/pessoa/:id", PessoaController.obterPessoaPorId);
+router.get("/pessoas/:estudanteId/matricula", PessoaController.pegaMatriulas);
+router.get(
+  "/pessoas/matricula/:turmaId/confirmadas",
+  PessoaController.pegaMatriculasPorTurma
+);
+
+router.get("/pessoas/matricula/lotada", PessoaController.pegaTurmasLotadas);
+
 router.post("/pessoa", PessoaController.criarPessoa);
 router.post("/pessoas/:id/restaura", PessoaController.restauraPessoa);
+
 router.put("/pessoa/:id", PessoaController.atualizarPessoa);
 router.delete("/pessoa/:id", PessoaController.deletarPessoa);
 
