@@ -18,8 +18,10 @@ router.get("/pessoas/matricula/lotada", PessoaController.pegaTurmasLotadas);
 
 router.post("/pessoa", PessoaController.criarPessoa);
 router.post("/pessoas/:id/restaura", PessoaController.restauraPessoa);
+router.post("/pessoas/:estudanteId/cancela", PessoaController.cancelaPessoa);
 
 router.put("/pessoa/:id", PessoaController.atualizarPessoa);
+
 router.delete("/pessoa/:id", PessoaController.deletarPessoa);
 
 /* Rotas de Matrícula */
